@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
+	<title>task_6</title>
+</head>
+
+<body>
+	<script>
+
+
+
+		function getTableDataUser(rows = 0, cols = 0) {
+			let table = '<table border="1">'
+
+			for (let i = 0; i < rows; i++) {
+				table += '<tr>'
+				for (let j = 0; j < cols; j++) {
+					table += `<td>Рядок ${i}, стовпець ${j}</td>`
+				}
+				table += '</tr>'
+			}
+			table += '</table>'
+			return table;
+		}
+
+		let rows = parseInt(prompt(`Введіть кількість рядків: `))
+		let cols = parseInt(prompt(`Введіть кількість стовпців: `))
+
+		let userData = getTableDataUser(
+			rows,
+			cols
+		)
+		document.write(getTableDataUser(rows, cols));
+
+
+	</script>
+	<div class="head__container">
+		<div class="head__title">
+			<h1>Задача 6</h1>
+		</div>
+		<div class="head__subtitle">
+			<h6>Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється
+				заданим фіксованим
+				повідомленням).</h6>
+		</div>
+	</div>
+</body>
+
+</html>
